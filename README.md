@@ -1,8 +1,8 @@
 # Meat - Angular Application
 
-Este respositório contém a implementação da aplicação feita no curso de Angular. O bundle para começar o seu projeto está [aqui] [1]
+Este respositório contém a implementação da aplicação feita no curso de Angular. O bundle para começar o seu projeto está [aqui].
 
-[1]: https://github.com/cod3rcursos/meat-app-starter
+[aqui]: https://github.com/cod3rcursos/meat-app-starter
 
 ## 1. Passos para começar
 

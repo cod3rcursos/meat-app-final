@@ -3,7 +3,7 @@
     {
       "id": "bread-bakery",
       "name": "Bread & Bakery",
-      "category": "Bakery",
+      "category": "Padaria",
       "deliveryEstimate": "25m",
       "rating": 4.9,
       "imagePath": "assets/img/restaurants/breadbakery.png",
@@ -23,7 +23,7 @@
     {
       "id": "coffee-corner",
       "name": "Coffee Corner",
-      "category": "Coffee Shop",
+      "category": "Cafeteria",
       "deliveryEstimate": "30-40m",
       "rating": 4.8,
       "imagePath": "assets/img/restaurants/coffeecorner.png",
@@ -43,7 +43,7 @@
     {
       "id": "ice-cream",
       "name": "Ice Cream",
-      "category": "Ice Creams",
+      "category": "Sorvetes",
       "deliveryEstimate": "40-65m",
       "rating": 4.5,
       "imagePath": "assets/img/restaurants/icy.png",

@@ -9,7 +9,7 @@ import {RadioOption} from './radio-option.model'
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(()=>RadioComponent),
+      useExisting: forwardRef(() => RadioComponent),
       multi: true
     }
   ]

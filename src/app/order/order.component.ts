@@ -6,7 +6,9 @@ import {Router} from '@angular/router'
 import {RadioOption} from '../shared/radio/radio-option.model'
 import {OrderService} from './order.service'
 import {CartItem} from '../restaurant-detail/shopping-cart/cart-item.model'
-import {Order, OrderItem} from "./order.model"
+import {Order, OrderItem} from './order.model'
+
+import 'rxjs/add/operator/do'
 
 @Component({
   selector: 'mt-order',
@@ -20,7 +22,9 @@ export class OrderComponent implements OnInit {
 
   orderForm: FormGroup
 
-  delivery: number = 8
+  delivery = 8
+
+  orderId: string
 
   paymentOptions: RadioOption[] = [
     {label: 'Dinheiro', value: 'MON'},
@@ -44,14 +48,14 @@ export class OrderComponent implements OnInit {
     }, {validator: OrderComponent.equalsTo})
   }
 
-  static equalsTo(group: AbstractControl): {[key:string]: boolean} {
+  static equalsTo(group: AbstractControl): {[key: string]: boolean} {
     const email = group.get('email')
     const emailConfirmation = group.get('emailConfirmation')
-    if(!email || !emailConfirmation){
+    if (!email || !emailConfirmation){
       return undefined
     }
-    if(email.value !== emailConfirmation.value){
-      return {emailsNotMatch:true}
+    if (email.value !== emailConfirmation.value){
+      return {emailsNotMatch: true}
     }
     return undefined
   }
@@ -76,15 +80,22 @@ export class OrderComponent implements OnInit {
     this.orderService.remove(item)
   }
 
+  isOrderCompleted(): boolean {
+    return this.orderId !== undefined
+  }
+
   checkOrder(order: Order){
     order.orderItems = this.cartItems()
-      .map((item:CartItem)=>new OrderItem(item.quantity, item.menuItem.id))
+      .map((item: CartItem) => new OrderItem(item.quantity, item.menuItem.id))
+
     this.orderService.checkOrder(order)
+      .do((orderId: string) => {
+        this.orderId = orderId
+      })
       .subscribe( (orderId: string) => {
         this.router.navigate(['/order-summary'])
         this.orderService.clear()
     })
-    console.log(order)
   }
 
 }

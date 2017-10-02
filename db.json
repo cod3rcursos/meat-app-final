@@ -370,5 +370,38 @@
       "restaurantId": "tasty-treats"
     }
   ],
-  "orders": []
+  "orders": [
+    {
+      "name": "Juliana",
+      "email": "juliana@gmail.com",
+      "emailConfirmation": "juliana@gmail.com",
+      "address": "pontes",
+      "number": "200",
+      "optionalAddress": "",
+      "paymentOption": "MON",
+      "orderItems": [
+        {
+          "quantity": 1,
+          "menuId": "cup-cake"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "name": "Amanda",
+      "email": "amanda@gmail.com",
+      "emailConfirmation": "amanda@gmail.com",
+      "address": "pontes",
+      "number": "100",
+      "optionalAddress": "",
+      "paymentOption": "DEB",
+      "orderItems": [
+        {
+          "quantity": 2,
+          "menuId": "cup-cake"
+        }
+      ],
+      "id": 2
+    }
+  ]
 }

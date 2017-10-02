@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import {trigger, state, style, transition, animate} from '@angular/animations'
 
-import {MenuItem} from "./menu-item.model"
+import {MenuItem} from './menu-item.model'
 
 @Component({
   selector: 'mt-menu-item',

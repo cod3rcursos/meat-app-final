@@ -22,7 +22,7 @@ Este respositório contém a implementação da aplicação feita no curso de An
 
 ### Iniciando o serviço (raiz da aplicação)
 
-`nodemon --watch backend backend/dist/server.js`
+`nodemon --watch backend backend/dist/server.js` 
 
 ## Goodies
 

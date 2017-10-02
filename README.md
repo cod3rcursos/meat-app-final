@@ -16,13 +16,13 @@ Este respositório contém a implementação da aplicação feita no curso de An
 
 ## 2. Iniciando o Backend
 
-### Instalando o json-server
+### Instalando o nodemon
 
-`npm install -g json-server`
+`npm install -g nodemon`
 
 ### Iniciando o serviço (raiz da aplicação)
 
-`json-server db.json`
+`nodemon --watch backend backend/dist/server.js`
 
 ## Goodies
 

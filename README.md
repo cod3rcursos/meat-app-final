@@ -16,11 +16,16 @@ Este respositório contém a implementação da aplicação feita no curso de An
 
 ## 2. Iniciando o Backend
 
+### Compilando o backend
+
+`cd backend`
+`tsc -w`
+
 ### Instalando o nodemon
 
 `npm install -g nodemon`
 
-### Iniciando o serviço (raiz da aplicação)
+### Iniciando o serviço (em outra aba de terminal - raiz da aplicação)
 
 `nodemon --watch backend backend/dist/server.js` 
 

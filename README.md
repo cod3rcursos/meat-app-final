@@ -18,9 +18,8 @@ Este respositório contém a implementação da aplicação feita no curso de An
 
 ### Compilando o backend
 
-`cd backend
- tsc -w
-`
+1. ``cd backend``
+2. ``tsc -w``
 
 ### Instalando o nodemon
 
